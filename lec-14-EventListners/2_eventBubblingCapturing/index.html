@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grandparent {
+            background-color: lightblue;
+            border: 2px solid black;
+            height: 300px;
+            width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .parent {
+            background-color: lightgreen;
+            border: 2px solid black;
+            height: 200px;
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+            /* padding: 20px; */
+        }
+        .child {
+            background-color: lightcoral;
+            border: 2px solid black;
+            height: 100px;
+            width: 400px;
+            padding: 20px;
+            margin: auto;
+        }
+    </style>
+<body>
+    <div class="grandparent">
+        Grandparent
+        <div class="parent">
+            Parent
+            <div class="child">
+                child
+                <!-- <button>Click Me</button> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

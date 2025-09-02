@@ -1,0 +1,69 @@
+# Lec-19-Express
+
+Make blogs on these topics
+    1.How to start a expess Server
+    2.get reuest ,query , params usage
+    3.post request
+    4.serving static files using express
+
+
+1. How to start an express server
+    a. npm init -y
+    b. npm install express
+    c. create index.js file
+    d. write code to start server
+    --------------index.js----------------
+    const express = require('express');
+    const app = express();
+    app.listen(4444, () => {
+    console.log("Server is running on http://localhost:4444");});
+
+    e. node index.js to start server
+    f. use nodemon to auto restart server on code change
+    g. npm install -g nodemon
+    h. nodemon index.js to start server with auto restart
+
+
+
+
+what is static file?
+it is a file which does not change for every user
+eg: html,css,js,image files
+
+what is dynamic file?
+it is a file which changes for every user
+eg: json file
+eg: user profile page, user dashboard
+
+
+
+3.  3 ways to serve static files in express JS
+    a. Using express.static() middleware
+    b. Using res.sendFile() method
+    c. Using res.download() method
+
+sendFile sends the file to the frontend to view
+eg: res.sendFile(__dirname+"/index.html") 
+or res.sendFile(path.join(__dirname,"/index.html"))
+
+- every time we use script or style in html file it makes a request to server to get that file
+- so we need to make those files static so that server can serve them
+- we can use express.static() middleware to make a folder static
+- we must include html file in static folder
+
+jo bhi file is needed inside html file usko staic folder me rakhna hai
+it will check inside static folder for those files
+if it is not found it will give 404 error
+
+
+header error
+issue occurs when we try to send multiple responses for a single request
+eg:
+app.get("/",(req,res)=>{
+    res.send("Hello World");
+    res.send("Hello World2"); // this will give header error
+});
+
+
+Important points while coding:
+- send all staic files inside static folder

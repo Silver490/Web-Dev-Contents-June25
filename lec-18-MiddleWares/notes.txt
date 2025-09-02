@@ -1,0 +1,27 @@
+1. when we use post request?
+    1. when we have large amount of data
+    2. when we want to hide data in url
+    3. when we want to send files(images,videos etc)
+    4. when we want to send complex data(json,xml etc)
+    5. when we want to send sensitive data(password,credit card details etc)
+
+we use postman to test post request
+get request can be tested in browser as well as postman
+    
+post request me data ko body me bhejte hai
+
+3. Jo user ne data diya usko "Payload" kahte hain
+
+4. when we sent data in x-www-form-urlencoded or form-data format
+then we use express.urlencoded() middleware to parse the data
+
+
+================= GET REQUEST =========================
+1. when we use get request?
+    when we have small amount of data
+    when we want to show data in url
+    Query parameters and params are used to send data in get request
+    Query parameters are sent in the url after "?" symbol
+    Multiple query parameters are separated by "&" symbol
+    params are used to send data in the url path
+    params are sent in the url path after "/" symbol

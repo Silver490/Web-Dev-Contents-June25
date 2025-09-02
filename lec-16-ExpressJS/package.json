@@ -1,0 +1,14 @@
+{
+  "name": "lec-16-expressjs",
+  "version": "1.0.0",
+  "description": "LEarning Express JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arjun Nishad",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

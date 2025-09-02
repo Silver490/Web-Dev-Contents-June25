@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Editor</title>
+    <!-- CodeMirror Core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    
+    <!-- CodeMirror Core JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+    
+    <!-- CodeMirror Modes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <!-- zsZip -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+
+
+    <h1 class="heading">Live Code Editor</h1>
+
+    <!-- Buttons -->
+    <button id="update-button">Run</button>
+    <button id="clear-button">Clear Console</button>
+    <button id="download-button">Download</button>
+    <button id="reset-button">Reset</button>
+
+
+    <!-- Editor Container -->
+    <div class="editor-container coding-area">
+        
+        <!-- HTML Text Area -->
+        <div class="html editor">
+            <h2>HTML</h2>
+            <textarea name="html-area" id="html-area" placeholder="Type your HTML here"></textarea>
+        </div>
+
+
+        <!-- CSS Text Area -->
+        <div class="css editor">
+            <h2>CSS</h2>
+            <textarea name="css-area" id="css-area" placeholder="Type your CSS here"></textarea>
+        </div>
+
+
+        <!-- JAVASCRIPT Text Area -->
+        <div class="js editor">
+            <h2>JAVASCRIPT</h2>
+            <textarea name="js-area" id="js-area" placeholder="Type your JS here"></textarea>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- PREVIEW and OUTPUT -->
+     <div class="preview">
+        <h2>Preview</h2>
+        <iframe name="output-frame" id="output-frame"></iframe>
+
+        <h2>Console Output</h2>
+        <div id="console-output"></div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+ 
+</body>
+</html>
