@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather-API</title>
-    <!-- Axios min -->
-     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
-<body>
-    <h1>Weather api</h1>
-    <input type="text"placeholder="Enter city name"/>
-    <button>Get Weather</button>
-    <script src="weatherApi.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather-API</title>
+        <!-- Axios min -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Weather API</h1>
+        <input type="text" placeholder="Enter city name" />
+        <button>Get Weather</button>
+        <div class="weather-data">
+            <h2><span class="city">-</span>, <span class="country">-</span></h2>
+            <img
+                class="icon"
+                src=""
+                alt="Weather Icon"
+                style="
+                    display: inline-block;
+                    width: 70px;
+                    height: 70px;
+                    vertical-align: middle;
+                    margin: 0;
+                "
+            />
+            <h3>Temperature: <span class="temp">-</span></h3>
+            <h3>Description: <span class="desc">-</span></h3>
+            <h3 class="humidity">Humidity: -</h3>
+            <h3 class="wind">Wind Speed: -</h3>
+            <h3 class="pressure">Pressure: -</h3>
+            <h3 class="visibility">Visibility: -</h3>
+        </div>
+
+        <script src="config.js"></script>
+        <script src="weatherApi.js"></script>
+    </body>
 </html>
