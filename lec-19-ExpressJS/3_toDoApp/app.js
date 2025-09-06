@@ -7,15 +7,22 @@ app.use(express.static(path.join(__dirname, "static"))); // by default it will l
 
 let todos = [
     // {id:1, name:"Cricket"}
+    // {id:1, name:"Cricket"}
+    // {id:1, name:"Cricket"}
 ];
 
+
+// get all todo tasks
 app.get('/todos', (req, res)=>{
     res.send(todos)
 })
 
+
+// get single todo task using id
 app.get('/todo/:id', (req, res)=>{
     const {id} = req.params
     const t = todos.filter(todo=> t.id == +id)
+    // console.log(t);
     res.send(data)
 })
 
@@ -31,6 +38,7 @@ app.post("/todo", (req, res) => {
     });
     // res.send(todos)
     // res.redirect('/todos')
+    console.log(task);
     res.redirect('/')
 });
 

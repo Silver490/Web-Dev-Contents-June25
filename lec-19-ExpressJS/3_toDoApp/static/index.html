@@ -12,11 +12,16 @@
 
         <!-- action is path, method is type of request -->
         <form action="/todo" method="post">
-            <input id="name" name="task" type="text" placeholder="Enter Task">
+            <input id="task-input" name="task" type="text" placeholder="Enter Task">
 
 
-            <button type="submit">Add Task</button>
+            <button id="submit-btn" type="submit">Add Task</button>
         </form>
+
+        <!-- Tasks will be shown here -->
+        <ul class="task-list">
+            
+        </ul>
 
     </div>
 
