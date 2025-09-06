@@ -1,0 +1,142 @@
+body {
+    /* This makes  */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #495365 0%, #8b94a1 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-data {
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    margin-top: 2rem;
+    min-width: 320px;
+    max-width: 90vw;
+    text-align: center;
+    transition: box-shadow 0.3s, background 0.3s;
+    /* Add a subtle mirror reflection at the bottom */
+    position: relative;
+    overflow: hidden;
+}
+
+.weather-data::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.25) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.weather-data:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+}
+
+h1 {
+    color: #222;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+input[type="text"] {
+    padding: 0.7rem 1.2rem;
+    border-radius: 12px;
+    border: 1px solid #b0b0b0;
+    outline: none;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus {
+    border: 1.5px solid #6a8cff;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(90deg, #6a8cff 0%, #88e0ef 100%);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(106, 140, 255, 0.12);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #88e0ef 0%, #6a8cff 100%);
+    box-shadow: 0 4px 16px rgba(106, 140, 255, 0.18);
+}
+
+.weather-data h2,
+.weather-data h3 {
+    color: #222;
+    margin: 0.7rem 0;
+    font-weight: 500;
+}
+
+.weather-data img.icon {
+    margin: 1rem 0 0.5rem 0;
+    width: 70px;
+    height: 70px;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+.city,
+.country {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.temp {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #6a8cff;
+}
+
+.desc {
+    font-style: italic;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.humidity,
+.wind,
+.pressure,
+.visibility {
+    color: #333;
+    font-size: 1rem;
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 500px) {
+    .weather-data {
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+        min-width: unset;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+}
