@@ -3,7 +3,7 @@
 let getWeatherUrl = (lat, lon, APIKey) =>
     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKey}`;
 let getLatAndLonUrl = (APIKey, city, limit = 1) =>
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${limit}&appid=${APIKey}`;
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${limit}&appid=${APIKey}`;
 let btn = document.querySelector("button");
 let cityName = document.querySelector("input");
 
